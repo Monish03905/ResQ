@@ -1,0 +1,161 @@
+{
+  "id": "resq-response-catalog",
+  "version": "1.0.0",
+  "status": "demonstration; not clinically validated",
+  "description": "Responder-entered incident mechanisms and warning signs for prioritizing human review. This is not a diagnostic or video-analysis dataset.",
+  "sources": [
+    {
+      "name": "American Red Cross: First Aid Steps",
+      "url": "https://www.redcross.org/take-a-class/first-aid/performing-first-aid/first-aid-steps",
+      "scope": "General scene-check and emergency escalation reference; consult current local protocols and training."
+    }
+  ],
+  "mechanisms": [
+    { "id": "fall", "label": "Fall or height-related event" },
+    { "id": "road-collision", "label": "Road or transport collision" },
+    { "id": "fire-smoke", "label": "Fire, heat, or smoke exposure" },
+    { "id": "crush-entrapment", "label": "Crush hazard or entrapment" },
+    { "id": "blunt-impact", "label": "Blunt impact" },
+    { "id": "sharp-object", "label": "Sharp-object incident" },
+    { "id": "other-unknown", "label": "Other or unknown" }
+  ],
+  "causes": [
+    {
+      "id": "fall-height",
+      "label": "Falls or height-related hazards",
+      "group": "Mechanism cause",
+      "severity": "high",
+      "note": "Look for head, limb, or spinal concerns after a drop, collapse, or elevated fall."
+    },
+    {
+      "id": "motor-transport",
+      "label": "Roadway or transport collisions",
+      "group": "Mechanism cause",
+      "severity": "high",
+      "note": "Repeated impact and restraint patterns may produce head, chest, or limb injury concerns."
+    },
+    {
+      "id": "fire-heat",
+      "label": "Fire, heat, or smoke exposure",
+      "group": "Mechanism cause",
+      "severity": "high",
+      "note": "Smoke inhalation, burns, and airway compromise are priority concerns in thermal incidents."
+    },
+    {
+      "id": "crush-trap",
+      "label": "Crush, entrapment, or structural collapse",
+      "group": "Mechanism cause",
+      "severity": "high",
+      "note": "Compression injuries and internal trauma can be present even when the external injury is limited."
+    },
+    {
+      "id": "blunt-force",
+      "label": "Blunt-force impact or struck-by events",
+      "group": "Mechanism cause",
+      "severity": "medium",
+      "note": "Assess for pain, restricted movement, chest or abdomen complaints, and head injury signs."
+    },
+    {
+      "id": "penetrating-hazard",
+      "label": "Sharp or penetrating object hazards",
+      "group": "Mechanism cause",
+      "severity": "high",
+      "note": "Bleeding, penetration, and severe tissue injury can develop even when the wound seems small."
+    },
+    {
+      "id": "unknown-hazard",
+      "label": "Unknown or mixed hazard conditions",
+      "group": "Mechanism cause",
+      "severity": "review",
+      "note": "Use responder-entered information and scene context to guide a cautious human review."
+    }
+  ],
+  "injuryPatterns": [
+    {
+      "id": "head-neck-spine",
+      "label": "Head, neck, or spinal concern",
+      "group": "Body area",
+      "severity": "urgent",
+      "note": "Restrict movement when there is concern for trauma to the head, neck, or spine."
+    },
+    {
+      "id": "chest-abdominal-trauma",
+      "label": "Chest or abdominal trauma concern",
+      "group": "Body area",
+      "severity": "urgent",
+      "note": "Breathing, pain, and swelling should prompt immediate human review and medical escalation."
+    },
+    {
+      "id": "limb-fracture",
+      "label": "Limb deformity, swelling, or severe pain",
+      "group": "Body area",
+      "severity": "review",
+      "note": "Movement restriction or swelling may indicate a serious injury requiring assessment."
+    },
+    {
+      "id": "respiratory-distress",
+      "label": "Breathing difficulty or smoke exposure",
+      "group": "Physiologic concern",
+      "severity": "urgent",
+      "note": "Airway and breathing concerns require rapid escalation to emergency responders."
+    },
+    {
+      "id": "bleeding-risk",
+      "label": "Bleeding or shock concern",
+      "group": "Physiologic concern",
+      "severity": "urgent",
+      "note": "Hemorrhage or suspected shock should be reviewed immediately by trained responders."
+    }
+  ],
+  "signals": [
+    {
+      "id": "unresponsive",
+      "label": "Person reported unresponsive or not fully awake",
+      "group": "Responsiveness",
+      "urgency": "urgent",
+      "note": "Responder-entered warning sign; seek emergency services and follow dispatcher guidance."
+    },
+    {
+      "id": "breathing-emergency",
+      "label": "Person reported not breathing normally or only gasping",
+      "group": "Breathing",
+      "urgency": "urgent",
+      "note": "Responder-entered warning sign; seek emergency services and follow dispatcher guidance."
+    },
+    {
+      "id": "life-threatening-bleeding",
+      "label": "Life-threatening bleeding reported",
+      "group": "Bleeding",
+      "urgency": "urgent",
+      "note": "Responder-entered warning sign; seek emergency services and follow dispatcher guidance."
+    },
+    {
+      "id": "suspected-spinal-injury",
+      "label": "Possible head, neck, or spinal injury reported",
+      "group": "Possible injury area",
+      "urgency": "urgent",
+      "note": "Do not use this interface to assess or move the person; follow dispatcher and trained responder instructions."
+    },
+    {
+      "id": "other-immediate-danger",
+      "label": "Another immediate life-threatening condition reported",
+      "group": "Other warning sign",
+      "urgency": "urgent",
+      "note": "Responder-entered warning sign; seek emergency services and follow dispatcher guidance."
+    },
+    {
+      "id": "pain-or-limited-movement",
+      "label": "Pain or limited movement reported; severity not assessed",
+      "group": "Other observation",
+      "urgency": "review",
+      "note": "Needs in-person assessment by a qualified responder; this signal does not identify an injury."
+    },
+    {
+      "id": "unknown-status",
+      "label": "Person status is unknown or cannot be confirmed",
+      "group": "Information gap",
+      "urgency": "review",
+      "note": "Keep status unconfirmed and request an in-person welfare check by responders."
+    }
+  ]
+}

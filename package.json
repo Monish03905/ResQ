@@ -1,0 +1,32 @@
+{
+  "name": "resq",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:api\" \"vite --host 127.0.0.1 --port 5180 --strictPort\"",
+    "dev:api": "node server/index.mjs",
+    "build": "tsc -b && vite build",
+    "lint": "oxlint",
+    "test": "node --test server/index.test.mjs",
+    "preview": "concurrently -k \"npm:dev:api\" \"vite preview --host 127.0.0.1 --port 5181 --strictPort\"",
+    "start": "npm run build && npm run preview"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.1.0",
+    "hls.js": "^1.7.3",
+    "lucide-react": "^1.53.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "concurrently": "^10.0.6",
+    "oxlint": "^1.81.0",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
